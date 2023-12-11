@@ -1,6 +1,6 @@
 <?php
 // Veritabanı bağlantısı
-$baglanti = mysqli_connect("16.171.33.71", "root", "admin123", "anketodev2");
+$baglanti = mysqli_connect("localhost", "root", "admin123", "anketodev2");
 
 // Bağlantı kontrolü
 if (!$baglanti) {
