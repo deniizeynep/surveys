@@ -160,10 +160,11 @@ background-image: url('resim111.jpg'); "     >
 <label for="egitim_4"><input type="radio" name="egitim" value="Önlisans" id="egitim_4"> Önlisans</label><br>
 
 <p class="question">2- Yaş aralığınız</p>
-<label for="yas_1"><input type="radio" name="yas" value="14-17" id="yas_1"> 14-17</label><br>
-<label for="yas_2"><input type ="radio" name="yas" value="18-23" id="yas_2"> 18-23</label><br>
-<label for="yas_3"><input type="radio" name="yas" value="24-30" id="yas_3"> 24-30</label><br>
-<label for="yas_4"><input type="radio" name="yas" value="31+" id="yas_4"> 31+</label><br>
+<label for="yas_1"><input type="radio" name="yas" value="14-17" id="yas_1"> 10-14</label><br>
+<label for="yas_2"><input type="radio" name="yas" value="14-17" id="yas_2"> 14-17</label><br>
+<label for="yas_3"><input type ="radio" name="yas" value="18-23" id="yas_3"> 18-23</label><br>
+<label for="yas_4"><input type="radio" name="yas" value="24-30" id="yas_4"> 24-30</label><br>
+<label for="yas_5"><input type="radio" name="yas" value="31+" id="yas_5"> 31+</label><br>
 
 <p class="question">3- Cinsiyetiniz</p>
 <label for="cinsiyet_1"><input type="radio" name="cinsiyet" value="Bay" id="cinsiyet_1"> Bay</label><br>
