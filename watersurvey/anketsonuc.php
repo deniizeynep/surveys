@@ -37,9 +37,7 @@ $RadioGroup22 = $_POST["RadioGroup22"];
 $RadioGroup23 = $_POST["RadioGroup23"];
 $CheckboxGroup1 =  $_POST["CheckboxGroup1"];
 
-
 $CheckboxGroup1String = implode(", ", $CheckboxGroup1);
-
 
 // Veritabanına ekleme sorgusu
 $sorgu = "INSERT INTO anket (egitim, yas, cinsiyet, il, soru,RadioGroup1,RadioGroup2,RadioGroup3,RadioGroup4,RadioGroup5,RadioGroup6,RadioGroup7
@@ -50,15 +48,11 @@ VALUES ('$egitim', '$yas', '$cinsiyet', '$il', '$soru','$RadioGroup1', '$RadioGr
   '$RadioGroup14', '$RadioGroup15', '$RadioGroup16', 
 '$RadioGroup17', '$RadioGroup18', '$RadioGroup19', '$RadioGroup20', '$RadioGroup21', '$RadioGroup22', '$RadioGroup23','$CheckboxGroup1String')";
 
-
-
-
 // Sorguyu çalıştır
 if (mysqli_query($baglanti, $sorgu)) {
     echo "Kaydınız başarıyla eklenmiştir.";
 } else {
     echo "Kayıt eklenirken hata oluştu: " . mysqli_error($baglanti);
 }
-
 
 mysqli_close($baglanti);

@@ -1,156 +1,127 @@
 <!doctype html>
 <html>
 <head>
-	
 <meta charset="utf-8">
-	
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
- 
-
 <title>Kitap Anketi</title>
 	<style>
-	
 	.submit-button {
-            padding: 10px 20px;
-		        margin-top: 25px; 
-            font-size: 18px;
-            background-color: #8B4513;
-            color: #fff;
-            border: none;
-            cursor: pointer; 
-            border-radius: 35px;
-            transition: background-color 0.3s, transform 0.3s;
-            margin-right: 4px;
-		      
-        }
-
-        .submit-button:hover {
-            background-color: #D2691E;
-            transform: scale(1.1);
-			
-        }
-
-        .button-container {
-            display: flex;
-            justify-content: center; 
-            align-items: center; }
-
-        .button-icon {
-            margin-right: 10px;
-        }
-		
-		.header {
-      border: 2px solid;
-      padding: 10px;
-      text-align: left;
-      border-radius: 10px 10px 5px 5px;
-    }
-
-    .header p {
-      margin: 0;    
-    }
-
-    .header .right {
-      float: right;
-      margin-top: -20px;
-    }
-
-    .header .right {
-      float: right;
-      margin-top: -20px;
-    }
-    
-    .table{
-border-width: 2px; 
-border-style: solid; 
-border-radius: 10px; 
-padding: 10px; 
-width: 50%; 
-background-image: url('arkaresimm.jpg'); 
-border: 1px solid;
-padding: 10px;
-box-shadow: 5px 10px #888888;
+    padding: 10px 20px;
+		margin-top: 25px; 
+    font-size: 18px;
+    background-color: #8B4513;
+    color: #fff;
+    border: none;
+    cursor: pointer; 
+    border-radius: 35px;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-right: 4px;
+  }
+  .submit-button:hover {
+    background-color: #D2691E;
+    transform: scale(1.1);	   
+  }
+  .button-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; }
+  .button-icon {
+    margin-right: 10px;
+  }	
+	.header {
+    border: 2px solid;
+    padding: 10px;
+    text-align: left;
+    border-radius: 10px 10px 5px 5px;
+  }
+  .header p {
+    margin: 0;    
+  }
+  .header .right {
+    float: right;
+    margin-top: -20px;
+  }
+  .header .right {
+    float: right;
+    margin-top: -20px;
+  }  
+  .table{
+    border-width: 2px; 
+    border-style: solid; 
+    border-radius: 10px; 
+    padding: 10px; 
+    width: 50%; 
+    background-image: url('images/bookimg.jpg'); 
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 10px #888888;
     position: relative;
     margin: auto;
     margin-top: 20px;
     margin-bottom: 20px;
-
-    }
-
-     .title {
-      border: 2px solid;
-      text-align: center;
-      font-size: 25px;
-      padding: 20px;
-      border-radius: 5px 5px 10px 10px;
-    }
-
-    .note {
-      text-align: center; 
-      font-size: 19px;
-      padding: 5px;
-      font-style: italic;
-    }
-
-    .question {
-      font-weight: bold;
-      font-size: 18px;
-    }
-      
-    .back{
-      background-image: url('arkaresimm.jpg'); 
-      border-radius: 10px;
-    }
-    .reset-button {
-      padding: 10px 30px;
-      font-size: 18px;
-      background-color: #8B4513;
-      color: #fff;
-      border: none;
-      cursor: pointer;
-      border-radius: 35px;
-      transition: background-color 0.3s, transform 0.3s;
-      margin-top: 25px; 
-      margin-left: 4px;
-    }
-    .reset-button:hover {
-      background-color: 	#D2691E;
-      transform: scale(1.1);
-    }
-    .reset-button i {
-      margin-right: 5px; }
-  
-		
+  }
+  .title {
+    border: 2px solid;
+    text-align: center;
+    font-size: 25px;
+    padding: 20px;
+    border-radius: 5px 5px 10px 10px;
+  }
+  .note {
+    text-align: center; 
+    font-size: 19px;
+    padding: 5px;
+    font-style: italic;
+  }
+  .question {
+    font-weight: bold;
+    font-size: 18px;
+  }    
+  .back{
+    background-image: url('images/bookimg.jpg'); 
+    border-radius: 10px;
+  }
+  .reset-button {
+    padding: 10px 30px;
+    font-size: 18px;
+    background-color: #8B4513;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 35px;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 25px; 
+    margin-left: 4px;
+  }
+  .reset-button:hover {
+    background-color: 	#D2691E;
+    transform: scale(1.1);
+  }
+  .reset-button i {
+    margin-right: 5px; 
+  }	
 	</style>
-
 </head>
-
-<body   style="background-color: #F5DEB3;
-background-image: url('resim111.jpg'); "     >
-		
+<body style="background-color: #F5DEB3;
+background-image: url('images/bookimg2.jpg');">
 	<div class="back">
 	   <div class="header">
         <p>221250057 &nbsp &nbsp Fatma Sena Balkuv</p>
-        <p class="right"><?php $tarih = date("d.m.Y");
-                    echo($tarih);?></p>
+        <p class="right"><?php $tarih = date("d.m.Y"); echo($tarih);?></p>
         <p>221250015 &nbsp &nbsp Zeynep Deniz</p>
         <p>221250029 &nbsp &nbsp Berna Kaya</p>
         <p class="right">Afyon Kocatepe Üniversitesi</p>
         <p style="margin-top: 10px;">Bilgisayar Programcılığı NÖ2</p>
         <p class="right">Afyon Meslek Yüksekokulu</p>
     </div>
-
     <div class="title">
         Kitap Okuma Alışkanlıkları Ve Tercihleri Anketi
         <div class="note">
            NOT: Bu anket araştırma ve teknikleri kapsamında ödev olarak hazırlanmıştır.
-           </div>
+            </div>
            </div>
           </div>
-
-
 <div class="table">
-  
 <form action="anketsonuc2.php" method="post">
 
 <p class="question">1- Eğitim durumunuz</p>
@@ -272,7 +243,6 @@ background-image: url('resim111.jpg'); "     >
 <label for="RadioGroup13_1"><input type="radio" name="RadioGroup13" value="Daha ucuz" id="RadioGroup13_1"> Daha ucuz</label><br>
 <label for="RadioGroup13_2"><input type="radio" name="RadioGroup13" value="Benzer fiyatlar" id="RadioGroup13_2"> Benzer fiyatlar</label><br>
 <label for="RadioGroup13_3"><input type="radio" name="RadioGroup13" value="Kararsızım" id="RadioGroup13_3"> Kararsızım</label><br>
-
       
 <p class="question">18- Kitap okumanıza engel olan şeyler nelerdir?</p>
 <label for="CheckboxGroup4_0"><input type="checkbox" name="CheckboxGroup4[]" value="Dikkat dağıtıcı faktörler" id="CheckboxGroup4_0"> Dikkat dağıtıcı faktörler</label><br>
@@ -306,7 +276,6 @@ background-image: url('resim111.jpg'); "     >
 <label for="RadioGroup18_1"><input type="radio" name="RadioGroup18" value="Yabancı yazarları daha çok tercih ederim" id="RadioGroup18_1"> Yabancı yazarları tercih ederim</label><br>
 <label for="RadioGroup18_2"><input type="radio" name="RadioGroup18" value="İkisini de tercih ederim" id="RadioGroup18_2"> İkisini de tercih ederim</label><br>
 <label for="RadioGroup18_2"><input type="radio" name="RadioGroup18" value="İkisini de tercih ederim" id="RadioGroup18_2"> İkisini de tercih etmem</label><br>
-
       
 <p class="question">23- İnternette bazı kitapların yayımlanmasının insanın kitaba olan ilgisini arttıracağına inanıyor musunuz?</p>
 <label for="RadioGroup19_0"><input type="radio" name="RadioGroup19" value="Evet, yazarların yeni eserlerinin tanıtımı kitaba ilgiyi arttırır" id="RadioGroup19_0"> Evet, yazarların yeni eserlerinin tanıtımı kitaba ilgiyi arttırır</label><br>
@@ -325,15 +294,13 @@ background-image: url('resim111.jpg'); "     >
 <label for="CheckboxGroup21_4"><input type="checkbox" name="CheckboxGroup21[]" value="Her fırsatta, zaman sınırlaması olmaksızın" id="CheckboxGroup21_4"> Her fırsatta, zaman sınırlaması olmaksızın</label><br>
 <label for="CheckboxGroup21_5"><input type="checkbox" name="CheckboxGroup21[]" value="Kitap okuma alışkanlığım yok" id="CheckboxGroup21_5"> Kitap okuma alışkanlığım yok</label><br>
 
-            <div class="button-container" style="display: flex; justify-content: center;">
-                <button class="submit-button" type="submit">
-                    <i class="fas fa-paper-plane button-icon"></i> Gönder
-                </button>
-
-                <button class="reset-button" type="reset"><i class="fas fa-sync"></i> Sıfırla</button>
-            </div>
-        </form>
+    <div class="button-container" style="display: flex; justify-content: center;">
+      <button class="submit-button" type="submit">
+        <i class="fas fa-paper-plane button-icon"></i> Gönder
+      </button>
+      <button class="reset-button" type="reset"><i class="fas fa-sync"></i> Sıfırla</button>
+          </div>
+      </form>
     </div>
-
 </body>
 </html>

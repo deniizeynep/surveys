@@ -7,7 +7,6 @@ if (!$baglanti) {
     echo ("Bağlantı hatası: " . mysqli_connect_error());
 }
 
-
 $egitim = $_POST["egitim"];
 $yas = $_POST["yas"];
 $cinsiyet = $_POST["cinsiyet"];
@@ -34,7 +33,6 @@ $RadioGroup19 = $_POST["RadioGroup19"];
 $RadioGroup20 = $_POST["RadioGroup20"];
 $CheckboxGroup21 = $_POST["CheckboxGroup21"];
 
-
 $CheckboxGroup1String = implode(", ", $CheckboxGroup1);
 $CheckboxGroup7String = implode(", ", $CheckboxGroup7);
 $CheckboxGroup2String = implode(", ", $CheckboxGroup2);
@@ -42,8 +40,6 @@ $CheckboxGroup3String = implode(", ", $CheckboxGroup3);
 $CheckboxGroup4String = implode(", ", $CheckboxGroup4);
 $CheckboxGroup5String = implode(", ", $CheckboxGroup5);
 $CheckboxGroup21String = implode(", ", $CheckboxGroup21);
-
-
 
 // Veritabanına ekleme sorgusu
 $sorgu = "INSERT INTO anket2 (egitim, yas, cinsiyet,  soru,RadioGroup1,CheckboxGroup1,RadioGroup3,RadioGroup4,RadioGroup5,RadioGroup6, CheckboxGroup7
@@ -53,10 +49,6 @@ VALUES ('$egitim', '$yas', '$cinsiyet','$soru','$RadioGroup1', '$CheckboxGroup1S
  '$RadioGroup6', '$CheckboxGroup7String', '$RadioGroup8', '$CheckboxGroup5String', '$RadioGroup10', '$CheckboxGroup2String', '$CheckboxGroup3String', '$RadioGroup13',
   '$CheckboxGroup4String', '$RadioGroup15', '$RadioGroup16', 
 '$RadioGroup17', '$RadioGroup18', '$RadioGroup19', '$RadioGroup20','$CheckboxGroup21String')";
-
-
-
-
 
 // Sorguyu çalıştır
 if (mysqli_query($baglanti, $sorgu)) {
